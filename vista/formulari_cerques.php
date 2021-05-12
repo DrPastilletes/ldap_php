@@ -25,11 +25,43 @@ session_start();
 
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="../index.html">CB</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="perceptibilidad.html">Perceptibilitat</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="operabilitat.html">Operabilitat</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="comprensibilitat.html">Comprensibilitat</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="robusteza.html">Robustesa</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.php">Login LDAP</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html">Inici</a></li>
+        <li class="breadcrumb-item"><a href="login.php">Login</a></li>
+    </ol>
+</nav>
 <div class="p-5 container mt-5" style="background-color: aquamarine">
     <h1>Cerca</h1>
     <?php echo $_SESSION['filtre'];
     unset($_SESSION['filtre']); ?>
-    <form id="form_ldap">
+    <form id="form_ldap" method="POST" action="../controllers/searchController.php">
         <div class="form-group">
             <label for="nom">Nom</label>
             <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom">
@@ -56,14 +88,14 @@ session_start();
         </div>
         <div class="form-group">
             <label for="username">Nom d'usuari</label>
-            <input type="email" class="form-control" id="username" placeholder="Username">
+            <input type="text" name='username' class="form-control" id="username" placeholder="Username">
         </div>
         <div class="form-group">
             <label for="grup">Grup</label>
             <select class="custom-select" name="grups" id="grup">
                 <option value="*">Tots</option>
-                <option value="2000">Professors</option>
-                <option value="3000">Alumnes</option>
+                <option value="profes">Professors</option>
+                <option value="alumnes">Alumnes</option>
             </select>
         </div>
         <button type="submit" class="btn btn-success">Enviar</button>
@@ -84,54 +116,18 @@ session_start();
         <br><br>
         <tbody>
         <?php foreach ($_SESSION['resultats'] as $key => $item){ ?>
+	<tr>
+        	<td><?= $item['cn'][0] ?></td>
+            	<td><?= $item['sn'][0] ?></td>
+            	<td><?= $item['telephonenumber'][0] ?></td>
+            	<td><?= $item['mobile'][0] ?></td>
+            	<td><?= $item['mail'][0] ?></td>
+            	<td><?= $item['o'][0] ?></td>
+            	<td><?= $item['cn'][0] ?></td>
         <tr>
-            <td><?= $item['cn'][0] ?></td>
-            <td><?= $item['sn'][0] ?></td>
-            <td><?= $item['telephonenumber'][0] ?></td>
-            <td><?= $item['mobile'][0] ?></td>
-            <td><?= $item['mail'][0] ?></td>
-            <td><?= $item['o'][0] ?></td>
-            <td><?= $item['cn'][0] ?></td>
-        <tr>
-            <?php } ?>
-
-
+        <?php } ?>
         </tbody>
     </table>
 </div>
-
-<script>
-    $('#form_ldap').validate({
-        rules: {
-            telefon: {
-                validacioTel: true
-            },
-            mobil: {
-                validacioMobil: true
-            },
-            email: {
-                email: true
-            }
-        },
-        messages: {
-            telefon: {
-                validacioTel: 'CB - El telefon fix no te un format correcte'
-            },
-            mobil: {
-                validacioMobil: 'CB - El telefon mobil no te un format correcte'
-            },
-            email: {
-                email: 'CB - El email no te un format correcte'
-            }
-        }
-    });
-    $.validator.addMethod("validacioTel", function (value, element, params) {
-        return /^(\+34|0034|34)?[89]\d{8}$/.test(value);
-    });
-    $.validator.addMethod("validacioMobil", function (value, element, params) {
-        return /^[679]{1}[0-9]{8}$/.test(value);
-    });
-</script>
-
 </body>
 </html>

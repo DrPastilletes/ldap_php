@@ -5,7 +5,7 @@ class LdapCB{
     private $ldapConfig = [
         'host' => 'ldap://localhost',
         'port' => '389',
-        'root' => 'dc=dawCB,dc=cat',
+        'root' => 'ou=groups,dc=dawCB,dc=cat',
         'alumnes' => 'cn=alumnes,ou=groups,dc=dawCB,dc=cat',
         'profes' => 'cn=profes,ou=groups,dc=dawCB,dc=cat',
         'adminAuthData' => [

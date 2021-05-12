@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comprensibilitat</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="../index.html">CB</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="perceptibilidad.html">Perceptibilitat</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="operabilitat.html">Operabilitat</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="comprensibilitat.html">Comprensibilitat</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="robusteza.html">Robustesa</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.php">Login LDAP</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html">Inici</a></li>
+        <li class="breadcrumb-item"><a href="comprensibilitat.html">Comprensibilitat</a></li>
+    </ol>
+</nav>
+<div class="container-fluid d-flex align-items-center flex-column">
+    <h1>Comprensibilitat</h1>
+    <br>
+    <div class="row w-75 shadow">
+        <article class="mt-4 p-3 w-100" id="mecanismes">
+            <h4 class="mt-2" style="font-weight: bold;">Mecanismes de Navegacio</h4>
+            <hr class="w-100">
+            <p>Per aconseguir que la pagina sigui el maxim homogenea i entenedora possible hauries de utilitzar el
+                mateix sistema de navegacio en tota la pagina. A part aquest sistema de navegació ha de ser util i
+                directe, no es pot saltar informació que sigui necessaria.</p>
+            <h4 style="font-weight: bold;">Exemples</h4>
+            <hr class="w-100">
+            <a href="#mecanismes">Mecanismes de Navegacio</a><br>
+            <a href="#explicacions">Explicacions de paraules dificils i/o inusuals</a><br>
+            <a href="#abreviatura">Significat de abreviatures</a>
+        </article>
+    </div>
+    <hr>
+    <div class="row w-75 shadow">
+        <article class="mt-4 p-3 w-100" id="explicacions">
+            <h4 class="mt-2" style="font-weight: bold;">Explicacions de paraules dificils i/o inusuals</h4>
+            <hr class="w-100">
+            <p>Per aconseguir fer una pagina accessible i entenedora per tothom, depenent del llenguatge que utilitzis
+                poden ser necessaris petits apunts o explicacions sobre paraules o expresions utilitzades.</p>
+            <h4 style="font-weight: bold;">Exemples</h4>
+            <hr class="w-100">
+            <b>Sense explicació</b>
+            <div>
+                <p>El quars és un mineral molt comú, el més abundant que es pot trobar a la superfície terrestre. És un
+                    compost químic de silici i oxigen (diòxid de silici o sílice) amb fórmula SiO2. Segons la
+                    classificació
+                    de Nickel-Strunz pertany a la classe dels òxids</p>
+            </div>
+            <br>
+            <b>Amb explicació</b>
+            <div>
+                <p>El quars és un mineral molt comú, el més abundant que es pot trobar a la superfície terrestre. És un
+                    compost químic de silici i oxigen (diòxid de silici o sílice) amb fórmula SiO2. Segons la
+                    classificació
+                    de Nickel-Strunz₁ pertany a la classe dels òxids</p>
+                <p>Nickel-Strunz₁: La classificació de Nickel-Strunz és un sistema de classificació fet servir
+                    universalment en mineralogia, que es basa en la composició química dels minerals.</p>
+            </div>
+        </article>
+    </div>
+    <hr>
+
+    <div class="row w-75 shadow">
+        <article class="mt-4 p-3 w-100" id="abreviatura">
+            <h4 class="mt-2" style="font-weight: bold;">Significat de abreviatures</h4>
+            <hr class="w-100">
+            <p>Bastant similiar que en el apartat anterior, pero aquest cop es per una abreviatura que pot ser que el
+                usuari visitant no coneixi</p>
+            <h4 style="font-weight: bold;">Exemples</h4>
+            <hr class="w-100">
+            <b>Sense explicacio</b>
+            <div>
+                <p>LDAP</p>
+            </div>
+            <br>
+            <b>Amb explicacio</b>
+            <div>
+                <p>LDAP₁</p>
+                <p>LDAP₁: Lightweight Directory Access Protocol</p>
+            </div>
+        </article>
+    </div>
+</div>
+<br>
+
+<footer class="bg-dark p-4 bottom text-center" style="color: white">
+    Footer CB
+</footer>
+
+</body>
+</html>

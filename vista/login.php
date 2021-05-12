@@ -35,6 +35,38 @@ session_start();
     }
 </style>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="../index.html">CB</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="perceptibilidad.html">Perceptibilitat</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="operabilitat.html">Operabilitat</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="comprensibilitat.html">Comprensibilitat</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="robusteza.html">Robustesa</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.php">Login LDAP</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html">Inici</a></li>
+        <li class="breadcrumb-item"><a href="login.php">Login</a></li>
+    </ol>
+</nav>
 <div class="vertical-center">
     <div class="container h-100">
         <div class="row d-flex justify-content-center">

@@ -7,7 +7,7 @@ if(isset($_SESSION['resultats'])){
 }
 
 $ldap = new LdapCB();
-$filtre = '(&';
+$filtre = '(&(objectclass=inetOrgPerson)';
 
 if(!empty($_POST['nom'])){
     $aux = $_POST['nom'];
@@ -21,7 +21,7 @@ if(!empty($_POST['cognoms'])){
 
 if(!empty($_POST['telefon'])){
     $aux = $_POST['telefon'];
-    $filtre = $filtre . '(telephone='. $aux.')';
+    $filtre = $filtre . '(telephoneNumber='. $aux.')';
 }
 
 if(!empty($_POST['mobil'])){
@@ -31,7 +31,12 @@ if(!empty($_POST['mobil'])){
 
 if(!empty($_POST['email'])){
     $aux = $_POST['email'];
-    $filtre = $filtre . '(email='. $aux.')';
+    $filtre = $filtre . '(mail='. $aux.')';
+}
+
+if(!empty($_POST['username'])){
+    $aux = $_POST['username'];
+    $filtre = $filtre . '(uid=' . $aux . ')';
 }
 
 if(!empty($_POST['institut-organització'])){

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Perceptibilitat</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="../index.html">CB</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="perceptibilidad.html">Perceptibilitat</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="operabilitat.html">Operabilitat</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="comprensibilitat.html">Comprensibilitat</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="robusteza.html">Robustesa</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.php">Login LDAP</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<nav aria-label="breadcrumb" >
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html">Inici</a></li>
+        <li class="breadcrumb-item"><a href="perceptibilidad.html">Perceptibilitat</a></li>
+    </ol>
+</nav>
+<div class="container-fluid d-flex align-items-center flex-column">
+    <h1>Perceptibilitat</h1>
+    <br>
+    <div class="row w-75 shadow">
+        <article class="mt-4 p-3">
+            <h4 class="mt-2" style="font-weight: bold;">Contrasts de colors</h4>
+            <hr class="w-100">
+            <p>En el que a contrast de colors es refereix cal diferenciar entre 2 aspectes, text/lletres i imatges, en
+                el primer
+                cas cal que el contrast entre el color de fons i el color de les lletres sigui alt però sense ser
+                molest, és a
+                dir, agafar colors que en conjunt tinguin un bon contrast i siguin agradables a la vista. En canvi en
+                imatges i
+                art més visual potser ens interessarà que els colors tinguin un contrast més lleu però més "harmònic" o
+                agradable a la vista. A la següent imatge es pot veure una roda de colors, on els oposats són els colors
+                amb més
+                contrast, però per exemple, unes lletres grogues sobre un fons lila encara que tingui molt bon contrast
+                no és
+                agradable a la vista.</p>
+            <img src="img/cirulo-cromatico-diseño-web-300x259.png" style="width: 300px; height: 250px"
+                 alt="roda de colors">
+            <p>Roda de colors i contrast</p>
+            <h4 style="font-weight: bold;">Exemples</h4>
+            <hr class="w-100">
+            <b>Textos amb contrast</b>
+            <div class="rounded" style="border: solid black 1px">
+                Text amb bon contrast
+            </div>
+            <br>
+            <div class="rounded" style="background-color: darkviolet; color: yellow">
+                Text amb un mal contrast
+            </div>
+            <br>
+            <div class="rounded" style="background-color: indianred; color: salmon">
+                Text sense contrast
+            </div>
+        </article>
+    </div>
+    <hr>
+    <div class="row w-75 shadow">
+        <article class="mt-4 p-3">
+            <h4 class="mt-2" style="font-weight: bold;">Auto Complementat</h4>
+            <hr class="w-100">
+            <p>Aquest és un punt bastant simple, a l'hora de escriure coses en un input que ens doni la opcio de
+                autocompletar</p>
+            <h4 style="font-weight: bold;">Exemples</h4>
+            <hr class="w-100">
+            <b>Input autocompletat</b>
+            <form action="/action_page.php" method="get">
+                <label for="nom">Tria un nom:</label>
+                <input list="nom" name="nom">
+                <datalist id="nom">
+                    <option value="Carles">
+                    <option value="Alex">
+                    <option value="Eloi">
+                    <option value="Izan">
+                    <option value="Rohit">
+                    <option value="Esteve">
+                    <option value="Arnau">
+                </datalist>
+            </form>
+            <br>
+            <b>Input sense autocompletat</b>
+            <form action="/action_page.php" method="get">
+                <label>Tria un nom:</label>
+                <input type="text" name="browser">
+            </form>
+        </article>
+    </div>
+    <hr>
+    <div class="row w-75 shadow">
+        <article class="mt-4 p-3">
+            <h4 class="mt-2" style="font-weight: bold;">Text alternatiu</h4>
+            <hr class="w-100">
+            <p>Els texts alternatius de una imatge son molt importants a l'hora de dissenyar una pagina web, ja que ens
+                poden ser de molta utilitat en cas de que per algun motiu no trobes la ruta de la imatge ens apareixeria
+                aquest text descriptiu</p>
+            <h4 style="font-weight: bold;">Exemples</h4>
+            <hr class="w-100">
+            <b>Imatge trobada</b>
+            <br>
+            <img src="img/macaco-feliz.jpg" alt="Macaco feliç" style="width: 400px; height: 250px;">
+            <p>Macaco fent-se una selfie</p>
+            <br>
+            <b>Imatge no trobada</b>
+            <br>
+            <img src="" alt="Macaco feliç" style="width: 400px; height: 250px;">
+        </article>
+    </div>
+</div>
+<br>
+
+<footer class="bg-dark p-4 bottom text-center" style="color: white">
+    Footer CB
+</footer>
+
+</body>
+</html>

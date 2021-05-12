@@ -1,7 +1,7 @@
 <?php
 session_start();
 include ('../models/Ldap.php');
-$contrasenya = $_POST['password'];
+$contrasenya = $_POST['contrasenya'];
 echo $contrasenya;
 if(!empty($contrasenya)){
     $ldap = new LdapCB('cn=admin,dc=dawCB,dc=cat');
