@@ -39,7 +39,7 @@ session_start();
             <li class="nav-item">
                 <a class="nav-link" href="operabilitat.html">Operabilitat</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="comprensibilitat.html">Comprensibilitat</a>
             </li>
             <li class="nav-item">
